@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    height: 100vh;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f7fb;
+}
+/*contaiiner styling */
+.container{
+ padding: 7rem 9rem 7rem 9rem;
+ border-radius: 14px;
+ background: #fff;
+ box-shadow: 0 5px 10px rgba(0, 0,0,0.1);
+}
+/*two image gap */
+.result_image{
+    display: flex;
+    column-gap: 8rem;
+}
+.container.start .user_result{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake{
+    50%{
+        transform: rotate(10deg);
+    }
+}
+.container.start .cpu_result{
+    transform-origin: right;
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake{
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+
+.result_image img{
+    width: 100px;
+}
+/* for image rotation*/
+.user_result img{
+    transform: rotate(90deg);
+}
+.cpu_result img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.result{
+    text-align: justify;
+    font-size: 2rem;
+    color: #0c0416;
+    margin-top: 1.5rem;
+}
+.option_image img {
+    width: 50px;
+}
+/* if we apply opacity here it aply to belove three image and hover(pointer jar khali 3 image var ghetla tr srvana lagu hota) all three image if we click on one display all(hover)*/
+.option_images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    
+}
+.container.start .option_images{
+    pointer-events: none;
+}
+/* here 1st hover display for all 3*/
+/*cursor pointer hand pointer wherenever hover on img*/
+.option_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.option_images:hover{
+    opacity: 1;
+}
+.option_images.active{
+    opacity: 1;
+}
+/*jiske upar point kya hai vohi dikhayega default none kiya hai*/
+.option_image img{
+    pointer-events: none; 
+}
+.option_image p{
+    color: #0c0416;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
